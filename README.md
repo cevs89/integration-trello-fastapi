@@ -18,8 +18,12 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the pro
 * install linters requirements  `pip install -r requirements/linters.txt`
 
 ### How to run linters?
-There are 2 types of linters:
+There are 4 types of linters:
 * Black: Which formats the python code to black style: `black app/`
 * Flake8: which analyze code: `flake8 app/`
 * Isort: isort your imports, so you don't have to: `isort app/ --profile black`
 * Safety: Safety packages: `safety check -r requirements/file_name.txt`
+
+### You can also run all linters as follows:
+
+`pre-commit run --all-files`
