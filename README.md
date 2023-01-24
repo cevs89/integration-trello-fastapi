@@ -8,7 +8,21 @@ This Challenge is about publishes cards in Trello from the API
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the project.
 
+## Docker install and Run
+* Build docker: `docker-compose build`
+* Run project from Docker: `docker-compose up`
+
+#### or
+After the build:
+
+* Run project from Docker: `docker-compose up -d`
+* Check the logs: `docker-compose logs -f`
+
 ## Install this if you need to development
+> or if you wanna run the project with virtualenv and the command uvicorn from server
+
+## Install Base dependency
+`pip install -r requirements/base.txt`
 
 ### How to set up dev tools
 * install dev requirements  `pip install -r requirements/dev.txt`
@@ -26,4 +40,4 @@ There are 4 types of linters:
 
 ### You can also run all linters as follows:
 
-`pre-commit run --all-files`
+* `pre-commit run --all-files`
