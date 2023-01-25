@@ -8,7 +8,7 @@ We recommended to see the docs: http://127.0.0.1:8000/redoc
 
 > Just you need work space empty, like this:
 
-![image info](./app/work_space.png)
+![image info](work_space.png)
 
 
 ENDPOINT: `http://localhost:8000/create/new/environment/`
