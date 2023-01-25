@@ -21,10 +21,3 @@ repos:
     hooks:
     -   id: isort
         args: ["--profile", "black", "app/"]
--   repo: local
-    hooks:
-    -   id: safety
-        name: safety
-        language: system
-        entry: safety check -r requirements/dev.txt
-        pass_filenames: false

@@ -2,7 +2,11 @@ version: '3.8'
 
 services:
   web:
-    build: .
+    build:
+      context: .
+      args:
+        - KEY_AUTH=${KEY_AUTH}
+        - TOKEN_AUTH=${TOKEN_AUTH}
     command: uvicorn app.main:app --host 0.0.0.0
     volumes:
       - .:/app
