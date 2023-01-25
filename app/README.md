@@ -11,7 +11,7 @@ We recommended to see the docs: http://127.0.0.1:8000/redoc
 ![image info](work_space.png)
 
 
-ENDPOINT: `http://localhost:8000/create/new/environment/`
+ENDPOINT POST: `http://localhost:8000/create/new/environment/`
 
 Body: `{
 "name_board": "Obi-Wan Kennobi"
@@ -37,7 +37,7 @@ This endpoint you just need to call it once time. This endpoint will do the foll
 
 If everything is OK, with the first step, now you can create your cards.
 
-ENDPOINT: `http://localhost:8000/create/cards/`
+ENDPOINT POST: `http://localhost:8000/create/cards/`
 
 Create card bug
 Body:

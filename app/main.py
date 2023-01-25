@@ -1,4 +1,4 @@
-from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi import Depends, FastAPI, status
 from sqlalchemy.orm import Session
 
 from app.controller import create_data
@@ -17,7 +17,7 @@ async def create_environment(get_board: BoardSchema, db: Session = Depends(get_d
     try:
         _response = BoardService(get_board).execute
     except Exception as e:
-        raise HTTPException from e
+        raise ValueError(e) from e
 
     create_data(db, _response)
     return {"details": "Success", "reponse": _response}
@@ -28,6 +28,6 @@ async def create_cards(get_cards: CardsSchema, db: Session = Depends(get_db)):
     try:
         _reponse = CardsService(get_cards, db).execute
     except Exception as e:
-        raise HTTPException from e
+        raise ValueError(e) from e
 
     return {"details": _reponse}

@@ -36,7 +36,7 @@ class BoardService:
             _reponse_id_board = self.__validations(_response.json())
             return _reponse_id_board
         else:
-            raise ValueError(_response.text)
+            return ValueError(_response.text)
 
     @property
     def execute(self):

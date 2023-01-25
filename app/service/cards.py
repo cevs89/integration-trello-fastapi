@@ -99,7 +99,7 @@ class CardsService:
         if _response.status_code == 200:
             return _response.json()
         else:
-            raise ValueError(_response.text)
+            return ValueError(_response.text)
 
     @property
     def execute(self):
