@@ -14,6 +14,9 @@ ENV TOKEN_AUTH ${TOKEN_AUTH}
 
 COPY ./requirements/base.txt /code/requirements.txt
 
+RUN echo $KEY_AUTH
+RUN echo $TOKEN_AUTH
+
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY ./app /code/app
